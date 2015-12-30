@@ -408,6 +408,20 @@ public class MaterialSearchView extends FrameLayout implements Filter.FilterList
         }
     }
 
+    public String[] getSuggestions() {
+        if (mAdapter != null) {
+            return mAdapter.getTypeAheadData();
+        }
+        return null;
+    }
+
+    public ArrayList<String> getSuggestionsAsList() {
+        if (mAdapter != null) {
+            return mAdapter.getData();
+        }
+        return null;
+    }
+
     /**
      * Dismiss the suggestions list.
      */

@@ -91,6 +91,14 @@ public class SearchAdapter extends BaseAdapter implements Filterable {
         return position;
     }
 
+    public String[] getTypeAheadData() {
+        return this.typeAheadData;
+    }
+
+    public ArrayList<String> getData() {
+        return this.data;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         MyViewHolder mViewHolder;
