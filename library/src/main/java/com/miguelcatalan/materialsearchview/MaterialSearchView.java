@@ -36,6 +36,7 @@ import android.widget.TextView;
 import com.miguelcatalan.materialsearchview.utils.AnimationUtil;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -410,14 +411,14 @@ public class MaterialSearchView extends FrameLayout implements Filter.FilterList
 
     public String[] getSuggestions() {
         if (mAdapter != null) {
-            return mAdapter.getTypeAheadData();
+            return ((SearchAdapter)mAdapter).getTypeAheadData();
         }
         return null;
     }
 
     public ArrayList<String> getSuggestionsAsList() {
         if (mAdapter != null) {
-            return mAdapter.getData();
+            return ((SearchAdapter)mAdapter).getData();
         }
         return null;
     }
